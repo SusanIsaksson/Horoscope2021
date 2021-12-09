@@ -1,0 +1,8 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    background-color: rgba(252, 132, 252, 0.445) ;
+}
