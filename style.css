@@ -6,3 +6,14 @@ body {
     text-align: center;
     background-color: rgba(252, 132, 252, 0.445) ;
 }
+
+footer {
+    margin-top: 5em;
+}
+
+#yourZodiac {
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+
