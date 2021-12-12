@@ -13,27 +13,35 @@
 <body>
     <div>
         <header>
-            <h1>
-                Min header
-            </h1>
+            <img src="./image/astrology.jfif" alt="">
         </header>
     </div>
 
     <div>
         <h1>Vilket är ditt stjärntecken?</h1>
-        <h4>Fyll i ditt födelseår och dag här:</h4>    
+        <h4>Fyll i ditt födelseår, månad och datum här:</h4>    
     </div>
 
     <div>
-        <input id="dateInput" type="date">
-        <button id="saveBtn">Save</button>
+        <input name="inputDate" id="dateInput" type="date">
+        <button id="saveBtn">Spara</button>
     </div>
-
-    <div><h5>Buttons</h5>
+    <div id="resultDate" style="margin-top: 2em;"> 
         
-        <button id="getBtn">Get</button>
+    </div> 
+
+    <div style="margin-top: 2em;">
+        <div>
+            <button id="getBtn">Ditt stjärntecken</button>
+            <div id="yourZodiac"></div>
+        </div>
+       
         <button id="updateBtn">Update</button>
         <button id="deleteBtn">Delete</button>
+    </div>
+
+    <div>
+        <footer>20210115 @Susan Isaksson</footer>
     </div>
     
 </body>
