@@ -1,6 +1,4 @@
 <?php
-//Begärs via $_POST koll av om födelsedatum finns sparat, beräkna rätt tecken och spara i $_SESSION --
-//Uppdatera det sparade horoskopet som finns i $_SESSION - Retur true/false
 
 function zodiac($month, $day) { 
 
@@ -52,7 +50,11 @@ try {
 
         if($_SERVER["REQUEST_METHOD"] === "POST") {
 
-            //key set in the request-body - check if saved in body
+            if(!isset($_SESSION["zodiac"])) {
+                echo json_encode(false);
+                exit;
+            }
+
             if(isset($_POST["month"]) && isset($_POST["day"])) {
 
                 $yourZodiac = zodiac($_POST["month"], $_POST["day"]);

@@ -1,7 +1,4 @@
 <?php
-//Begärs via $_POST koll av födelsedatum - knapp "SPARA", beräkna rätt tecken och spara i $_SESSION
-//Finns horoskopet redan görs ingenting - går ej att räkna ut ingentng sparas
-//Retur skall endast vara true/false
 
 function zodiac($month, $day) { 
 
@@ -64,16 +61,13 @@ try {
 
                 $yourZodiac = zodiac($_POST["month"], $_POST["day"]);
 
-                /* if(empty($yourZodiac))*/
                 if(!isset($yourZodiac)) {
-                    //echo json_encode("Please enter you birthdate...");
+                    
                     echo json_encode(false);
                 };
                     
-                //saving value of key from request into key 'yourZodiac' in $_SESSION
                 $_SESSION["zodiac"] = serialize($yourZodiac);
 
-                //sending succes (true) back to client
                 echo json_encode(true);
                 exit;
             }

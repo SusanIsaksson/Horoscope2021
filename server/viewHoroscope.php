@@ -1,7 +1,4 @@
 <?php
-//Begärs via $_GET, kollar om horoskop finns sparat i $_SESSION = retur tecken 
-//Om inget finns sparat i $_SESSION = ingen utskrift 
-
 
 try {
     
@@ -17,8 +14,8 @@ try {
                 exit;
 
             } else {
-                //när datum saknas
-                echo json_encode("No date is saved...?");
+                    
+                echo json_encode("No date is saved...");
                 exit;
             }
         } else {

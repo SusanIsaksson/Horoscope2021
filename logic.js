@@ -7,14 +7,13 @@ document.getElementById("deleteBtn").addEventListener("click", deleteZodiac);
 
 async function initSite() {
     document.getElementById("yourZodiac").innerText = "";
-    //getZodiac()
+    getZodiac()
   
 }
 
 //POST
 async function saveZodiac() {
 
-    
     let monthInput
     let dayInput
     
@@ -29,7 +28,6 @@ async function saveZodiac() {
         console.log(false)
         return
     }
-    
 
     const body = new FormData()
     body.set("month", monthInput)
@@ -37,18 +35,19 @@ async function saveZodiac() {
 
     console.log(true)
     document.getElementById("resultDate").innerText = "Du har valt datum: " + dayInput + " / " + monthInput;
-    //document.getElementById("dateInput").value = "";
+  
     
 
     const calculateZodiac = await makeRequest("./server/addHoroscope.php", "POST", body)
     console.log(calculateZodiac)
     
     getZodiac();
+    
 }
 
 //GET (viewHoroscope)
 async function getZodiac() {
-
+    
     const zodiacInput = document.getElementById("yourZodiac")
     const collectedZodiac = await makeRequest("./server/viewHoroscope.php", "GET")
 
@@ -72,7 +71,6 @@ async function updateZodiac() {
         dayInput = birthday.getDate();
     }
     if (!input.length) {
-        alert ("Du måste fylla i ditt födelsedata")
         console.log("false")
         return
     }
@@ -92,6 +90,8 @@ async function deleteZodiac() {
 
     console.log(collectedZodiac)
     getZodiac()
+    
+    document.getElementById("resultDate").innerText = "";
 }
 
 
