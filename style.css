@@ -5,15 +5,49 @@
 body {
     text-align: center;
     background-color: rgba(252, 132, 252, 0.445) ;
+    font-family: 'Arial';
+    font-size: 0.8em;
 }
 
 footer {
-    margin-top: 5em;
+    padding: 1%;
+    margin-top: 8em;
+    font-size: small;
+    background-color: rgba(252, 132, 252, 0.74)  ;
+}
+
+h3 {
+    margin-top: 1em;
+    font-size: 1.5em;
+}
+
+#resultDate  {
+    height: 2em;
+    font-size: large;
+    margin-top: 1.4em;
+   
+   
 }
 
 #yourZodiac {
-    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
     margin-bottom: 2em;
+    
 }
 
+.headerDiv {
+    margin-top: 2em;
+    line-height: 3em;
+}
+
+.centerDiv {
+    height: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 3em;
+}
 
